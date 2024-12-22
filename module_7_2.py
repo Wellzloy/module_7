@@ -12,3 +12,12 @@ result = custom_write('test.txt', info)
 
 # Возвращать словарь strings_positions, где ключом будет кортеж (<номер строки>, <байт начала строки>),
 # а значением - записываемая строка. Для получения номера байта начала строки используйте метод tell() перед записью.
+users_tuple = ((("+111", "123455"), "Tom"), ("+384767557", "Bob"), ("+958758767", "Alice"))
+users_dict = dict(users_tuple)
+print(users_dict)
+
+users_list = [["+111123455", "Tom"], ["+384767557", "Bob"], ["+958758767", "Alice"]]
+users_dict = dict(users_list)
+print(users_dict)
+
+# Пример полученного словаря: {(1, 0): 'Text for tell.', (2, 16): 'Используйте кодировку utf-8.'}
