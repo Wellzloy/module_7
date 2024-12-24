@@ -10,10 +10,13 @@ def custom_write(file_name, strings):
     with open(file_name, 'r', encoding='utf-8') as file:
         for num, line in enumerate(file, start=1):
             file_num.append(num)
+
             file_line.append(line)
     print(tuple(file_tell))
     print(tuple(file_num))
     print(file_line)
+    print(type(file_line))
+    print(list(map(str.strip, file_line)))
 
     def myfunc(a, b):
         return (a, b)
