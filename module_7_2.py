@@ -11,9 +11,15 @@ def custom_write(file_name, strings):
         for num, line in enumerate(file, start=1):
             file_num.append(num)
             file_line.append(line)
-    print(file_tell)
-    print(file_num)
+    print(tuple(file_tell))
+    print(tuple(file_num))
     print(file_line)
+
+    def myfunc(a, b):
+        return (a, b)
+
+    file_num_tell = map(myfunc, file_num, file_tell)
+    print(tuple(file_num_tell))
 
 
 
